@@ -41,4 +41,8 @@ public class AddNewContactScreen extends BaseScreen{
         buttonCreate.click();
         return new ContactListScreen(driver);
     }
+    public AddNewContactScreen submitContactNegative(){
+        buttonCreate.click();
+        return this;
+    }
 }

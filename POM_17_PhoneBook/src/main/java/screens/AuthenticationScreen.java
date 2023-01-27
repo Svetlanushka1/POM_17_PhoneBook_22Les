@@ -58,13 +58,13 @@ public class AuthenticationScreen extends BaseScreen{
         return new ContactListScreen(driver);
     }
 
-    public AuthenticationScreen isErrorMessageContainsText(String text){
-        Alert alert = new WebDriverWait(driver, 5)
-                .until(ExpectedConditions.alertIsPresent());
-        driver.switchTo().alert();
-        Assert.assertTrue(alert.getText().contains(text));
-        alert.accept();
-        return this;
-    }
+//    public AuthenticationScreen isErrorMessageContainsText(String text){
+//        Alert alert = new WebDriverWait(driver, 5)
+//                .until(ExpectedConditions.alertIsPresent());
+//        driver.switchTo().alert();
+//        Assert.assertTrue(alert.getText().contains(text));
+//        alert.accept();
+//        return this;
+//    }
 
 }
