@@ -13,7 +13,7 @@ public class LoginTests extends AppiumConfig {
     public void loginSuccess() {
         boolean res = new SplashScreen(driver)
                 .gotoAuthenticationScreen()
-                .fillEmail("abc@def.com")
+                .fillEmail("asd@zxc.com")
                 .fillPassword("$Abcdef12345")
                 .submitLogin()
                 .isContactListActivityPresent();

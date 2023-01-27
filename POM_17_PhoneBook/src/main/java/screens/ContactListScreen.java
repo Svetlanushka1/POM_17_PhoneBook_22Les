@@ -27,4 +27,10 @@ public class ContactListScreen extends BaseScreen {
         logoutButton.click();
         return new AuthenticationScreen(driver);
     }
+
+    public AddNewContactScreen openContactForm(){
+        waitElement(plusButton, 5);
+        plusButton.click();
+        return new AddNewContactScreen(driver);
+    }
 }
