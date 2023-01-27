@@ -70,14 +70,13 @@ public class ContactListScreen extends BaseScreen {
 
     public ContactListScreen removeOneContact(){
         waitElement(plusButton, 5);
-//        pause(5);
         MobileElement contact = contacts.get(0);
         System.out.println("Length = " + contacts.size());
         Rectangle rect = contact.getRect();
 
         int xStart = rect.getX() + rect.getWidth() / 8;
-        int xEnd = xStart + rect.getWidth() * 6 / 8;
-        int y = rect.getHeight() / 2;
+        int xEnd = xStart + (rect.getWidth() * 6) / 8;
+        int y = rect.getY() + rect.getHeight() / 2;
         System.out.println(xStart + "\n" + xEnd + "\n" + y);
 
         TouchAction<?> action = new TouchAction<>(driver);
@@ -85,7 +84,6 @@ public class ContactListScreen extends BaseScreen {
                 .moveTo(PointOption.point(xEnd, y))
                 .release()
                 .perform();
-//        waitElement(yesButton, 5);
         yesButton.click();
         pause(5);
         return this;
